@@ -5,19 +5,21 @@
         <h1 class="bold f-55">Product List</h1>
         <div class="buttons-wrap">
           <router-link :to="{ name: 'AddProduct'}">
-            <el-button>Add</el-button>
+            <el-button>ADD</el-button>
           </router-link>
           <el-button 
             @click.prevent="deleteProducts" 
             id="delete-product-btn">
-              Mass Delete
+              MASS DELETE
           </el-button>
         </div>
       </div>
 
       <div class="list" v-if="products">
         <div class="product" v-for="(product, index) in products" :key="index">
-          <el-checkbox v-model="checkbox[index]" :true-label="product.sku"></el-checkbox>
+          <el-checkbox 
+            v-model="checkbox[index]" :true-label="product.sku" 
+            class="delete-checkbox"></el-checkbox>
           <div class="id">{{product.sku}}</div>
           <h2 class="name">{{product.name}}</h2>
           <span class="price">{{product.price}} $</span>

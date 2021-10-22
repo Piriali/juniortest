@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="container">
-			<el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+			<el-form :model="ruleForm" :rules="rules" ref="ruleForm" id="product_form">
 				<div class="menu">
 					<h1 class="bold f-55">Product List</h1>
 			        <div class="buttons-wrap">
@@ -47,12 +47,12 @@
 							    <el-input v-model.number="ruleForm.length" id="length"></el-input>
 							</el-form-item>
 						</div>
-						<el-form-item prop="size" v-if="ruleForm.type === 'dvd'" key="size">
+						<el-form-item prop="size" v-if="ruleForm.type === 'dvd'" key="size" id="size">
 						  	<label>Please, provide size</label>
 						    <el-input v-model="ruleForm.size" id="size"></el-input>
 						</el-form-item>
 
-						<el-form-item prop="weigth" v-if="ruleForm.type === 'book'" key="weigth">
+						<el-form-item prop="weigth" v-if="ruleForm.type === 'book'" key="weigth" id="weigth">
 						  	<label>Please, provide weight</label>
 						    <el-input v-model="ruleForm.weigth" id="weigth"></el-input>
 						</el-form-item>
